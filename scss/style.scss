@@ -1,0 +1,10 @@
+@import 'reset';
+@import 'ball';
+@import 'animations';
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
