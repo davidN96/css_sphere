@@ -1,6 +1,8 @@
 const ball = document.querySelector('.ball');
 const regQuantity = document.querySelector('#quantity');
 const color = document.querySelector('#color');
+const labels = [...document.querySelectorAll('label')];
+
 quantity = 5;
 
 function render(quan) {
@@ -33,6 +35,9 @@ regQuantity.addEventListener('input', function () {
 
 color.addEventListener('input', function () {
     document.body.style.backgroundColor = `rgb(${this.value},${this.value},${this.value})`;
+    for (label of labels) {
+        label.style.color = `rgb(${255-this.value},${255-this.value},${255-this.value})`;
+    }
 });
 
 render(quantity);
